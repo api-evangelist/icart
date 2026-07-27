@@ -1,4 +1,16 @@
 aid: icart
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/icart.png
 name: iCart
 description: iCart is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
   network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -11,7 +23,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-website-status: unresolved
+x-website-note: 'Source 500.co portfolio scrape misaligned URLs by one row; the value
+  happyfresh.com belongs to HappyFresh (a separate 500 Global grocery company), not
+  iCart. Removed the incorrect Website pointer rather than propagate a wrong identity.
+  iCart is flagged is_api_provider:false in 500-global/portfolio. Real website unresolved
+  (icart.io is a parked/for-sale domain). 2026-07-20 enrichment re-run WITH working
+  web search still could not disambiguate: "iCart" resolves to several unrelated
+  entities (geticart.com QSR platform in Nigeria; icartupsell.com Shopify cart-upsell
+  app by Identixweb in India; a 403-gated Crunchbase org) and NONE could be verified
+  as the 500 Global portfolio company or as an API provider. No verifiable website or
+  API surface, so no artifacts were produced (no-fabrication). Leave as stub; needs a
+  primary-source 500 Global portfolio confirmation of the true iCart before enrichment.'
 tags:
 - Company
 apis: []
@@ -20,6 +44,9 @@ maintainers:
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://happyfresh.com
+common: []
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
